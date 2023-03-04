@@ -1,19 +1,19 @@
 import React from 'react'
-import AcerText from '../Components/AcerText/AcerText'
 import Navbar from '../Components/Navbar/Navbar'
 import Navbar2 from '../Components/Navbar2Page/Navbar2'
 import Navtel from '../Components/Navtel/Navtel'
+import Xeyperx from "../Components/Xeyperx/Xeyperx"
 
-const Acer = () => {
+
+const Hyper = () => {
   return (
     <div>
         <Navtel/>
         <Navbar/>
         <Navbar2/>
-        <AcerText/>
-        
+        <Xeyperx/>
     </div>
   )
 }
 
-export default Acer
+export default Hyper

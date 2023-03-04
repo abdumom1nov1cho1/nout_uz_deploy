@@ -1,11 +1,14 @@
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../Asus/AsusText.scss";
 import { useCart } from "react-use-cart";
+const MsiText = () => {
 
-const AcerText = () => {
+
   const [data, setData] = useState([]);
   const { addItem, getItem, removeItem } = useCart();
+
 
   useEffect(() => {
     axios
@@ -19,35 +22,21 @@ const AcerText = () => {
       });
   }, []);
 
-  const newarray = data.filter((el) => el.category === "Acer");
+  const newarray = data.filter((el) => el.category === "Msi");
+
 
   return (
     <div>
       <header>
         <div className="container">
-          <h1 className="Header__h1">Acer</h1>
+          <h1 className="Header__h1">Ноутбуки MSI</h1>
         </div>
         <div className="lenovo__tips">
           <img
-            src="https://nout.uz/wp-content/uploads/2022/06/nitro-5.jpg"
+            src="https://nout.uz/wp-content/uploads/2022/10/GP76-144-i7.jpg"
             alt=""
           />
-          <img
-            src="https://nout.uz/wp-content/uploads/2022/06/aspire.jpg"
-            alt=""
-          />
-          <img
-            src="https://nout.uz/wp-content/uploads/2022/06/predator.jpg"
-            alt=""
-          />
-          <img
-            src="https://nout.uz/wp-content/uploads/2022/06/predator.jpg"
-            alt=""
-          />
-          <img
-            src="https://nout.uz/wp-content/uploads/2022/06/swift.jpg"
-            alt=""
-          />
+         
         </div>
       </header>
       <div className="container">
@@ -62,11 +51,11 @@ const AcerText = () => {
                   <p className="card__p">{el.price} $</p>
                   {!getItem(el._id) ? (
                     <button
-                    onClick={() => addItem({ ...el, id: el._id })}
-                    className="btn3 btn-primary"
-                  >
-                    Добавлять
-                  </button>
+                      onClick={() => addItem({ ...el, id: el._id })}
+                      className="btn3 btn-primary"
+                    >
+                      Добавлять
+                    </button>
                   ) : (
                     <button
                       className="btn3 btn-secondary"
@@ -81,8 +70,8 @@ const AcerText = () => {
           })}
         </div>
       </div>
-    </div>
-  );
-};
+      </div>
+  )
+}
 
-export default AcerText;
+export default MsiText

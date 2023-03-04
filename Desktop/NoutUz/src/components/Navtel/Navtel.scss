@@ -56,17 +56,6 @@ nav {
 @media only screen and (max-width: 600px) {
   nav{
 
-      .Nav__tel{
-
-          .Nav__right{
-
-             .Nav__right__tel{
-
-              .Nav__right__tel__a{
-                font-size: 10px;
-              }
-             }
-          }
-      }
+      display: none;
   }
 }

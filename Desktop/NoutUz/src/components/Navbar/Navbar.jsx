@@ -1,9 +1,30 @@
 import React from "react";
+import { useCart } from "react-use-cart";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "../../Context";
 import "../Navbar/Navbar.scss";
 const Navbar = () => {
+  const { items } = useCart();
+
+
+  const { data } = useContext(Context);
+    //patch
+    const PatchElements = async (_id) => {
+      await axios.patch(`https://razer-api.onrender.com/devices/${_id}`, {
+        name: name,
+        image: img,
+        price: price,
+        desc: desc,
+        category: category,
+      });
+      window.location.reload();
+    };
+    //patch
+
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbarrr navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <a class="navbar-brand" href="#">
             <img
@@ -47,26 +68,34 @@ const Navbar = () => {
             </ul>
             <form class="vvv d-flex">
               <a href="">
-                <img
-                  src="https://icons.veryicon.com/png/o/miscellaneous/basic-monochrome-icon/refresh-149.png"
-                  alt=""
-                  style={{ width: "20px" }}
-                />
+                <Link to="/korzinka">
+                  <img
+                    src="https://www.pngmart.com/files/7/Cart-PNG-Pic.png"
+                    alt=""
+                    style={{ width: "25px" }}
+                  />
+                </Link>
+                <span className="ff">{items.length}</span>
               </a>
-              <a href="">
-                <img
-                  src="https://www.pngmart.com/files/10/User-Account-Person-PNG-File.png"
-                  alt=""
-                  style={{ width: "20px" }}
-                />
-              </a>
-              <a href="">
-                <img
-                  src="https://www.pngmart.com/files/7/Cart-PNG-Pic.png"
-                  alt=""
-                  style={{ width: "20px" }}
-                />
-              </a>
+              {!localStorage.getItem("access") ? (
+                <div className="center">
+                  <Link className="sign" to="/sign-up">
+                    Sign Up
+                  </Link>
+                  <Link className="sign" to="/sign-in">
+                    Sign In
+                  </Link>
+                </div>
+              ) : (
+                <button
+                  onClick={() => {
+                    window.localStorage.removeItem("access");
+                    window.location.reload();
+                  }}
+                >
+                  Log out
+                </button>
+              )}
             </form>
           </div>
         </div>

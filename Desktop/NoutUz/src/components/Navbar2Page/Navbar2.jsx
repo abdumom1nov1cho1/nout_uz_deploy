@@ -4,48 +4,58 @@ import "../Navbar2Page/Navbar2.scss";
 const Navbar2 = () => {
   return (
     <div>
-      <nav class="nnn navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <div class="dropdown">
             <button
-              class="btn dropdown-toggle"
+              class="btn  dropdown-toggle"
               type="button"
-              id="dropdownMenuButton3"
+              id="dropdownMenu3"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Все категории
+              Dropdown
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
               <li>
-                <a class="dropdown-item" href="#">
+                <button class="dropdown-item" type="button">
                   Ноутбуки
-                </a>
+                </button>
               </li>
               <li>
-                <a class="dropdown-item" href="#">
+                <button class="dropdown-item" type="button">
                   Игровые ноутбуки
-                </a>
+                </button>
               </li>
               <li>
-                <a class="dropdown-item" href="#">
+                <button class="dropdown-item" type="button">
                   Ультрабуки
-                </a>
+                </button>
               </li>
               <li>
-                <a class="dropdown-item" href="#">
+                <button class="dropdown-item" type="button">
                   Трансформеры
-                </a>
+                </button>
               </li>
               <li>
-                <a class="dropdown-item" href="#">
+                <button class="dropdown-item" type="button">
+                  Трансформеры
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">
                   Ноутбуки для бизнеса
-                </a>
+                </button>
               </li>
               <li>
-                <a class="dropdown-item" href="#">
+                <button class="dropdown-item" type="button">
                   ПК
-                </a>
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">
+                  Аксессуары
+                </button>
               </li>
             </ul>
           </div>
@@ -61,112 +71,120 @@ const Navbar2 = () => {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="uls">
-              <li className="lii"><Link to="/" >Главная</Link></li>
-              <div class="dropdown">
-                <button
-                  class="btn dropdown-toggle"
-                  type="button"
-                  id="dropdownMenu2"
+            <ul class="navbar-nav m-auto  mb-4 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <Link className="ss" to="/">Главная</Link>
+                </a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Бренды
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <button class="dropdown-item" type="button">
-                      <Link to="/asus">
-                      Asus
-                      </Link>
-                    </button>
+                    <a class="dropdown-item" href="#">
+                    <Link className="ss" to="/asus">Asus</Link>
+                    </a>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
-                     <Link to="/msi" >
-                      MSI
-                     </Link>
-                    </button>
+                    <a class="dropdown-item" href="#">
+                    <Link className="ss" to="/msi">MSI</Link>
+                    </a>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
-                      <Link to="/lenovo" >
-                        Lenovo
-                      </Link>
-                    </button>
+                    <a class="dropdown-item" href="#">
+                    <Link className="ss" to="/lenovo">Lenovo</Link>
+                    </a>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
-                      <Link  to="hp" >
-                      HP
-                      </Link>
-                    </button>
+                    <a class="dropdown-item" href="#">
+                    <Link className="ss" to="/hp">HP</Link>
+                    </a>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
-                     <Link to="/dell" >
-                     DELL
-                     </Link>
-                    </button>
+                    <a class="dropdown-item" href="#">
+                    <Link className="ss" to="/dell">DEll</Link>
+                    </a>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
-                     <Link to="/razer" >
-                     Razer
-                     </Link>
-                    </button>
+                    <a class="dropdown-item" href="#">
+                    <Link className="ss" to="/razer">Razer</Link>
+                    </a>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
-                      <Link to="/samsung" >
-                      Samsung
-                      </Link>
-                    </button>
+                    <a class="dropdown-item" href="#">
+                    <Link className="ss" to="/samsung">Samsung</Link>
+                    </a>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
-                      <Link to="/apple" >
-                      Apple
-                      </Link>
-                    </button>
+                    <a class="dropdown-item" href="#">
+                    <Link className="ss" to="/microsoft">Mcrosoft Surface</Link>
+                    </a>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
-                      Acer
-                    </button>
+                    <a class="dropdown-item" href="#">
+                    <Link className="ss" to="/apple">Apple</Link>
+                    </a>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
-                      LG
-                    </button>
+                    <a class="dropdown-item" href="#">
+                    <Link className="ss" to="/acer">Acer</Link>
+                    </a>
                   </li>
                   <li>
-                    <button class="dropdown-item" type="button">
-                      HyperX
-                    </button>
+                    <a class="dropdown-item" href="#">
+                    <Link className="ss" to="/lg">LG</Link>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                    <Link className="ss" to="/hyper">HyperX</Link>
+                    </a>
                   </li>
                 </ul>
-              </div>
-              <li className="lii">Условия кредита</li>
-              <li className="lii">Новости</li>
-              <li className="lii">Наши контакты</li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  Условия кредита
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  Новости
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  Наши контакты
+                </a>
+              </li>
             </ul>
-            <form class="zzz d-flex">
+            <form class="mmm d-flex">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/2292/2292011.png"
+                className="tel__btn__img"
+                src="https://img.freepik.com/free-icon/headphones_318-625320.jpg"
                 alt=""
-                style={{ width: "45px", height: "45px", paddingTop: "5px" }}
               />
-              <div className="nomers">
-                <a href="">+998 (93) 399-22-72</a>
-                <p>@Noutuz (Telegram)</p>
+              <div className="tel__btn">
+                <a className="tel__btn__a" href="">
+                  +998 (93) 399-22-72
+                </a>
+                <p className="tel__btn__p">@Noutuz (Telegram)</p>
               </div>
             </form>
           </div>
         </div>
       </nav>
     </div>
-    
   );
 };
 

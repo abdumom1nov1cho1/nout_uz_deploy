@@ -1,19 +1,18 @@
 import React from 'react'
-import AcerText from '../Components/AcerText/AcerText'
+import KorzinkaText from '../Components/KorzinkaText/KorzinkaText'
 import Navbar from '../Components/Navbar/Navbar'
 import Navbar2 from '../Components/Navbar2Page/Navbar2'
 import Navtel from '../Components/Navtel/Navtel'
 
-const Acer = () => {
+const Korzinka = () => {
   return (
     <div>
         <Navtel/>
         <Navbar/>
         <Navbar2/>
-        <AcerText/>
-        
+        <KorzinkaText/>
     </div>
   )
 }
 
-export default Acer
+export default Korzinka

@@ -1,5 +1,5 @@
 import React from "react";
-import MsiText from "../components/Msi/Msi";
+import MsiText from "../Components/Msi/MsiText";
 import Navbar from "../Components/Navbar/Navbar";
 import Navbar2 from "../Components/Navbar2Page/Navbar2";
 import Navtel from "../Components/Navtel/Navtel";
