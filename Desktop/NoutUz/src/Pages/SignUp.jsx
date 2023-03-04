@@ -1,11 +1,11 @@
 import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { Context } from "../context";
+import { Context } from "../Context";
 
 const SignUp = () => {
   const {
-    // signUp,
+    signUp,
     email,
     setEmail,
     userName,
@@ -13,8 +13,6 @@ const SignUp = () => {
     password,
     setPassword,
   } = useContext(Context);
-
-  console.log(email);
 
   return (
     <div>
@@ -37,9 +35,9 @@ const SignUp = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        {/* <button type="button" onClick={(event) => signUp(event)}>
+        <button type="button" onClick={(event) => signUp(event)}>
           Submit
-        </button> */}
+        </button>
       </form>
       <h1>
         Agar avval ham SignUp qilgan bo'lsangiz{" "}
